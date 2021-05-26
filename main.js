@@ -24,24 +24,31 @@ let semicolon = new Patients("Semicolon", "syntaxError", 60, [], "malade");
 docteur.salleAttente.push(Patients.length);
 // console.log(docteur.salleAttente);
 console.log(`Dans la salle d'attente, il y a ${Patients.length} patients`);
-docteur.cabinet.push(marcus);
-// docteur.salleAttente.splice(docteur.salleAttente.indexOf(0,1));
+docteur.patientIn(marcus.nom)
+
 // console.log(docteur.salleAttente)
 
 // ## Description du doctor
 // >Le doctor lui reçoit les patients dans son cabinet.
 
-console.log(`${marcus.nom} est entré dans le cabinet`);
 // console.log(docteur.cabinet);
 
 // Tout d'abord il les diagnostiques 
 
 docteur.diagnostiques("Marcus","mal indenté");
 
+let ctrlmajf = new NomDiagnostiques("ctrl+maj+f",60);
+
+console.log(`Le traitement de ${marcus.nom} est ${ctrlmajf.nom}`);   
 
 
-// puis se fait payer avant de préscrire un traitement. Attention le doctor fait à chaque fois sortir le patient de son cabinet avant de prendre le suivant. Dans son cabinet il y a son chat de race sphynx pour garder un environemment stérile. Son chat miaule toutes les deux secondes dans la console(bonus). La consultation coûte 50€. Les patients son dans un état de traitement avant de sortir du cabinet.
-// // ​
+// puis se fait payer avant de préscrire un traitement.
+
+docteur.prixConsultation(marcus, 50, docteur);
+
+
+// Attention le doctor fait à chaque fois sortir le patient de son cabinet avant de prendre le suivant. Dans son cabinet il y a son chat de race sphynx pour garder un environemment stérile. Son chat miaule toutes les deux secondes dans la console(bonus). La consultation coûte 50€. Les patients son dans un état de traitement avant de sortir du cabinet.
+// // // ​
 // |nom|argent|cabinet|diagnostique|patienTIn|patientOut
 // |---|---|---|---|---|---|
 
@@ -58,7 +65,6 @@ import {docteur,chat,cimetiere} from "./objets.js";
 // |azmatique|`Ventoline`|
 // |syntaxError|`f12+doc`|
 
-let ctrlmajf = new NomDiagnostiques("ctrl+maj+f",60);
 let saveOnFocusChange = new NomDiagnostiques("saveOnFocusChange",100);
 let CheckLinkRelation = new NomDiagnostiques("CheckLinkRelation",35);
 let Ventoline = new NomDiagnostiques("Ventoline",40);
