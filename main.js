@@ -5,7 +5,7 @@
 // ## Description des patients
 // >les malades ont un nom, une maladie, de l'argent, une poche, un état de santé,ils savent aller à un endroit, prendre un médicamment et payer. Au début, les patients sont dans un salle d'attente. 
 
-import {Patients} from "./class.js";
+import {Patients, NomDiagnostiques} from "./class.js";
 
 // |nom|maladie|argent|poche|etatSante|traitement|goTo|takeCare|paye|
 // |---|---|---|---|---|---|---|---|---|
@@ -57,7 +57,14 @@ import {docteur,chat,cimetiere} from "./objets.js";
 // |404|`CheckLinkRelation`|
 // |azmatique|`Ventoline`|
 // |syntaxError|`f12+doc`|
-// ​
+
+let ctrlmajf = new NomDiagnostiques("ctrl+maj+f",60);
+let saveOnFocusChange = new NomDiagnostiques("saveOnFocusChange",100);
+let CheckLinkRelation = new NomDiagnostiques("CheckLinkRelation",35);
+let Ventoline = new NomDiagnostiques("Ventoline",40);
+let f12doc = new NomDiagnostiques("f12+doc",20);
+
+
 // ## La pharmacie
 // >Les patients iront par après à la pharmacie et recevront leur traitement s'ils ont assez d'argent. Dans le cas ou ils ont assez d'argent ils seront alors en bonne santé sinon ils seront mort et il faudra alors les pousser dans un cimetière.
 

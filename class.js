@@ -18,4 +18,11 @@ class Patients{
 }
 
 
-export {Patients};
+export {Patients, NomDiagnostiques};
+
+class NomDiagnostiques{
+     constructor(nom,prix){
+          this.nom =nom;
+          this.prix= prix;
+     }
+}

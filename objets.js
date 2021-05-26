@@ -15,8 +15,10 @@ let docteur = {
      diagnostiques(nom,maladie){
           if(maladie == "mal indenté" && nom == "Marcus"){
           console.log(`La maladie de ${nom} est ${maladie}`);
+          console.log(`Le traitement de ${nom} est`);    
           }else if (maladie == "unsave" && nom == "Optimus"){
-               console.log(`La maladie de ${nom} est ${maladie}`);            
+               console.log(`La maladie de ${nom} est ${maladie}`); 
+                      
           }else if (maladie == 404 && nom == "Sangoku"){
                console.log(`La maladie de ${nom} est ${maladie}`);            
 
