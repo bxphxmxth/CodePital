@@ -22,11 +22,9 @@ let darthvader = new Patients("Darthvader","azmatique",110,[],"malade");
 let semicolon = new Patients("Semicolon", "syntaxError", 60, [], "malade");
 
 docteur.salleAttente.push(Patients.length);
-// console.log(docteur.salleAttente);
 
 console.log(`Dans la salle d'attente, il y a ${Patients.length} patients`);
 docteur.patientIn(marcus.nom)
-
 
 // console.log(docteur.salleAttente)
 
@@ -56,11 +54,9 @@ docteur.prixConsultation(marcus, 50, docteur);
 docteur.patientOut("Marcus", "traitement");
 // console.log(docteur.cabinet);
 // console.log(docteur.salleAttente);
-// console.log(marcus.etat);
 
 
 // Dans son cabinet il y a son chat de race sphynx pour garder un environemment stérile. Son chat miaule toutes les deux secondes dans la console(bonus). La consultation coûte 50€. Les patients son dans un état de traitement avant de sortir du cabinet.
-
 // chat.miauler();
 
 // // // // ​
@@ -91,8 +87,10 @@ marcus.seDeplacer(pharmacie);
 // console.log(pharmacie.nbrClients);
 
 marcus.prendreMedoc(ctrlmajf,marcus.poche,cimetiere);
+pharmacie.nbrClients.pop()
 
-// console.log(cimetiere.contenu);
+console.log(pharmacie.nbrClients);
+console.log(cimetiere.contenu);
 // ### Tarif des traitements
 // |Traitement|prix|
 // |---|---|
@@ -130,6 +128,8 @@ optimus.seDeplacer(pharmacie);
 // console.log(pharmacie.nbrClients);
 
 optimus.prendreMedoc(saveOnFocusChange,optimus.poche,cimetiere);
+pharmacie.nbrClients.pop()
+
 
 
 
@@ -161,6 +161,8 @@ sangoku.seDeplacer(pharmacie);
 // console.log(pharmacie.nbrClients);
 
 sangoku.prendreMedoc(saveOnFocusChange,sangoku.poche,cimetiere);
+pharmacie.nbrClients.pop()
+
 
 
 // PERSO  SANGOKU
@@ -190,6 +192,7 @@ darthvader.seDeplacer(pharmacie);
 
 darthvader.prendreMedoc(ventoline,darthvader.poche,cimetiere);
 // console.log(darthvader.poche);
+pharmacie.nbrClients.pop()
 
 
 
@@ -219,6 +222,9 @@ semicolon.seDeplacer(pharmacie);
 
 semicolon.prendreMedoc(ventoline,semicolon.poche,cimetiere);
 // console.log(semicolon.poche);
+pharmacie.nbrClients.pop()
 
 
 
+
+console.log(`Le docteur ${docteur.nom} et les lobbys pharmaceutiques sont riche. Requiescat In Pace : ${cimetiere.contenu}`);

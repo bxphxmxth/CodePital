@@ -1,3 +1,5 @@
+
+
 let docteur = {
      nom : "Riviera",
      argent: 50,
@@ -8,20 +10,20 @@ let docteur = {
           console.log(`${nom} est entré dans le cabinet`);
           // docteur.salleAttente.splice(docteur.salleAttente.indexOf(0,1));
           let nbrPatients = docteur.salleAttente[0] -= 1;
+          
 
           console.log(`Il ne reste plus que ${nbrPatients} patients dans la salle d'attente.`);
-          
+
 
 
 
      },
-     patientOut(nom,etat){
+     patientOut(nom){
           
           docteur.cabinet.pop();
           console.log(`${nom} est sorti du cabinet`);
         
-          // personne.etat = newEtat;
-          // newEtat = "En traitement";
+         
           
      },
      prixConsultation(patient,prix,docteur){
@@ -53,15 +55,7 @@ let docteur = {
 
 }
 
-let chat = {
-     nom: "Edgar",
-     miauler(){
-          setInterval(()=>{
-              
-               console.log(`Ichi, ni, san, Nya !`)
-           },2000)
-     },
-}
+
 
 export {docteur,chat,cimetiere,pharmacie}
 
@@ -85,3 +79,15 @@ let cimetiere = {
 }
 
 // console.log(`Sorry, ${this.nom} n'a pas assez d'argent, tu vas crever, this is america.`);
+
+
+let chat = {
+     nom: "Edgar",
+     miauler(){
+          setInterval(()=>{
+              
+               console.log(`Ichi, ni, san, nya !`)
+           },2000)
+     },
+
+}
