@@ -132,6 +132,8 @@ optimus.seDeplacer(pharmacie);
 // console.log(pharmacie.nbrClients);
 
 optimus.prendreMedoc(saveOnFocusChange,optimus.poche,cimetiere);
+console.log(optimus.poche);
+
 pharmacie.nbrClients.pop()
 // console.log(optimus.poche);
 // console.log(pharmacie.nbrClients);
