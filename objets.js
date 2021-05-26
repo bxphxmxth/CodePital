@@ -86,8 +86,9 @@ let chat = {
      miauler(){
           setInterval(()=>{
               
-               console.log(`Ichi, ni, san, nya !`)
+               console.log(` ${this.nom} le chat chantonne "Ichi, ni, san, nya !"`)
            },2000)
      },
 
 }
+

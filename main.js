@@ -24,7 +24,7 @@ let semicolon = new Patients("Semicolon", "syntaxError", 60, [], "malade");
 docteur.salleAttente.push(Patients.length);
 
 console.log(`Dans la salle d'attente, il y a ${Patients.length} patients`);
-docteur.patientIn(marcus.nom)
+docteur.patientIn(marcus.nom);
 
 // console.log(docteur.salleAttente)
 
@@ -57,7 +57,7 @@ docteur.patientOut("Marcus", "traitement");
 
 
 // Dans son cabinet il y a son chat de race sphynx pour garder un environemment stérile. Son chat miaule toutes les deux secondes dans la console(bonus). La consultation coûte 50€. Les patients son dans un état de traitement avant de sortir du cabinet.
-// chat.miauler();
+chat.miauler();
 
 // // // // ​
 // |nom|argent|cabinet|diagnostique|patienTIn|patientOut
@@ -89,8 +89,8 @@ marcus.seDeplacer(pharmacie);
 marcus.prendreMedoc(ctrlmajf,marcus.poche,cimetiere);
 pharmacie.nbrClients.pop()
 
-console.log(pharmacie.nbrClients);
-console.log(cimetiere.contenu);
+// console.log(pharmacie.nbrClients);
+// console.log(cimetiere.contenu);
 // ### Tarif des traitements
 // |Traitement|prix|
 // |---|---|
@@ -129,9 +129,8 @@ optimus.seDeplacer(pharmacie);
 
 optimus.prendreMedoc(saveOnFocusChange,optimus.poche,cimetiere);
 pharmacie.nbrClients.pop()
-
-
-
+// console.log(optimus.poche);
+// console.log(pharmacie.nbrClients);
 
 
 // PERSO 3 SANGOKU
