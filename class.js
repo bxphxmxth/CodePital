@@ -5,15 +5,17 @@ class Patients{
           this.argent = argent;
           this.poche = poche;
           this.etat = etat;
-          this.seDeplacer = (depart,arrivee) =>{
+          this.seDeplacer = (lieu) =>{
+               lieu.nbrClients.push(this.nom);
+               console.log(`${this.nom} est arrivé.e à la ${lieu.nom}`);
 
           };
           this.prendreMedoc = (medicament, poche) =>{
 
           };
-          this.payer = (vendeur,objet) =>{
+          // this.payer = (vendeur,objet) =>{
 
-          };
+          // };
      }
 }
 

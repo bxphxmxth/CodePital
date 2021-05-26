@@ -23,8 +23,10 @@ let semicolon = new Patients("Semicolon", "syntaxError", 60, [], "malade");
 
 docteur.salleAttente.push(Patients.length);
 // console.log(docteur.salleAttente);
+
 console.log(`Dans la salle d'attente, il y a ${Patients.length} patients`);
 docteur.patientIn(marcus.nom)
+
 
 // console.log(docteur.salleAttente)
 
@@ -34,6 +36,7 @@ docteur.patientIn(marcus.nom)
 // console.log(docteur.cabinet);
 
 // Tout d'abord il les diagnostiques 
+
 
 docteur.diagnostiques("Marcus","mal indenté");
 
@@ -47,14 +50,28 @@ console.log(`Le traitement de ${marcus.nom} est ${ctrlmajf.nom}`);
 docteur.prixConsultation(marcus, 50, docteur);
 
 
-// Attention le doctor fait à chaque fois sortir le patient de son cabinet avant de prendre le suivant. Dans son cabinet il y a son chat de race sphynx pour garder un environemment stérile. Son chat miaule toutes les deux secondes dans la console(bonus). La consultation coûte 50€. Les patients son dans un état de traitement avant de sortir du cabinet.
-// // // ​
+// Attention le doctor fait à chaque fois sortir le patient de son cabinet avant de prendre le suivant.
+
+// console.log(docteur.cabinet);
+docteur.patientOut("Marcus", "traitement");
+// console.log(docteur.cabinet);
+// console.log(docteur.salleAttente);
+// console.log(marcus.etat);
+
+
+// Dans son cabinet il y a son chat de race sphynx pour garder un environemment stérile. Son chat miaule toutes les deux secondes dans la console(bonus). La consultation coûte 50€. Les patients son dans un état de traitement avant de sortir du cabinet.
+
+// chat.miauler();
+
+// // // // ​
 // |nom|argent|cabinet|diagnostique|patienTIn|patientOut
 // |---|---|---|---|---|---|
 
 // |Debugger|0|[chat]
 
-import {docteur,chat,cimetiere} from "./objets.js";
+
+
+import {docteur,chat,pharmacie,cimetiere} from "./objets.js";
 
 // ### Grille des diagnostiques
 // |maladie|traitement|
@@ -74,6 +91,8 @@ let f12doc = new NomDiagnostiques("f12+doc",20);
 // ## La pharmacie
 // >Les patients iront par après à la pharmacie et recevront leur traitement s'ils ont assez d'argent. Dans le cas ou ils ont assez d'argent ils seront alors en bonne santé sinon ils seront mort et il faudra alors les pousser dans un cimetière.
 
+marcus.seDeplacer(pharmacie);
+// console.log(pharmacie.nbrClients);
 
 
 // ### Tarif des traitements
