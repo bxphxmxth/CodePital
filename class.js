@@ -46,3 +46,4 @@ class NomDiagnostiques{
           this.prix= prix;
      }
 }
+

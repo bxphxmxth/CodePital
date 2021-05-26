@@ -8,7 +8,12 @@ let docteur = {
      patientIn(nom){
           docteur.cabinet.push(nom);
           console.log(`${nom} est entré dans le cabinet`);
-          // docteur.salleAttente.splice(docteur.salleAttente.indexOf(0,1));
+          
+          // while(chat ==)
+          
+
+          
+
           let nbrPatients = docteur.salleAttente[0] -= 1;
           
 
@@ -82,7 +87,7 @@ let cimetiere = {
 
 
 let chat = {
-     nom: "Edgar",
+     nom: "Edgar le chat",
      miauler(){
           setInterval(()=>{
               

@@ -21,10 +21,12 @@ let sangoku = new Patients("Sangoku","404",80,"vide","malade");
 let darthvader = new Patients("Darthvader","azmatique",110,[],"malade");
 let semicolon = new Patients("Semicolon", "syntaxError", 60, [], "malade");
 
+docteur.cabinet.push(chat.nom);
 docteur.salleAttente.push(Patients.length);
 
 console.log(`Dans la salle d'attente, il y a ${Patients.length} patients`);
 docteur.patientIn(marcus.nom);
+console.log(`${marcus.nom} se retrouve dans le cabinet avec ${docteur.nom} et ${docteur.cabinet[0]}`);
 
 // console.log(docteur.salleAttente)
 
@@ -46,6 +48,7 @@ console.log(`Le traitement de ${marcus.nom} est ${ctrlmajf.nom}`);
 // puis se fait payer avant de préscrire un traitement.
 
 docteur.prixConsultation(marcus, 50, docteur);
+console.log(docteur.cabinet);
 
 
 // Attention le doctor fait à chaque fois sortir le patient de son cabinet avant de prendre le suivant.
@@ -55,9 +58,8 @@ docteur.patientOut("Marcus", "traitement");
 // console.log(docteur.cabinet);
 // console.log(docteur.salleAttente);
 
-
+console.log(docteur.cabinet);
 // Dans son cabinet il y a son chat de race sphynx pour garder un environemment stérile. Son chat miaule toutes les deux secondes dans la console(bonus). La consultation coûte 50€. Les patients son dans un état de traitement avant de sortir du cabinet.
-chat.miauler();
 
 // // // // ​
 // |nom|argent|cabinet|diagnostique|patienTIn|patientOut
@@ -134,9 +136,11 @@ pharmacie.nbrClients.pop()
 
 
 // PERSO 3 SANGOKU
+console.log(docteur.cabinet);
 
 docteur.patientIn(sangoku.nom);
 docteur.diagnostiques("Sangoku","404");
+console.log(docteur.cabinet);
 
 let CheckLinkRelation = new NomDiagnostiques("CheckLinkRelation",35);
 
