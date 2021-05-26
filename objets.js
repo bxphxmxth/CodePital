@@ -8,8 +8,19 @@ let docteur = {
      patientIn(nom){
           docteur.cabinet.push(nom);
           console.log(`${nom} est entré dans le cabinet`);
+          console.log(`${nom} se retrouve dans le cabinet avec le docteur ${docteur.nom} et ${docteur.cabinet[0]}`);
+
           
-          // while(chat ==)
+          if (chat.nom == true){
+               console.log("miaou");
+          }else{
+
+               console.log(`${chat.nom} chantonne "Ichi, ni, san, nya !"`)
+          //      setInterval(()=>{
+              
+          //      console.log(` ${this.nom} le chat chantonne "Ichi, ni, san, nya !"`)
+          //  },2000)
+          }
           
 
           
@@ -93,7 +104,8 @@ let chat = {
               
                console.log(` ${this.nom} le chat chantonne "Ichi, ni, san, nya !"`)
            },2000)
+           
      },
-
+     
 }
 

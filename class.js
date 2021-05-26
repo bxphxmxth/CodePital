@@ -23,11 +23,11 @@ class Patients{
                     // changer etat clg etat
                     
                     this.etat = "guérit";
-                    console.log(`${this.nom} a changé son état en ${this.etat} et se sent mieux`);
+                    console.log(`${this.nom} a changé son état de malade en ${this.etat} et se sent mieux`);
 
                }else{
                     lieu.contenu.push(this.nom);
-                    console.log(`Sorry, ${this.nom} n'a pas assez d'argent, tu vas crever, this is America.`);
+                    console.log(`Sorry, ${this.nom} n'a pas assez d'argent, iel va crever, this is America.`);
                     console.log(`${this.nom} est actuellement au ${lieu.nom} <3 `);
                     console.log(`Il y a actuellement ${lieu.contenu.length} personne.s décédé.es`);
                     

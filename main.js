@@ -23,12 +23,14 @@ let semicolon = new Patients("Semicolon", "syntaxError", 60, [], "malade");
 
 docteur.cabinet.push(chat.nom);
 docteur.salleAttente.push(Patients.length);
+console.log(docteur.salleAttente);
+
 
 console.log(`Dans la salle d'attente, il y a ${Patients.length} patients`);
 docteur.patientIn(marcus.nom);
-console.log(`${marcus.nom} se retrouve dans le cabinet avec ${docteur.nom} et ${docteur.cabinet[0]}`);
 
-// console.log(docteur.salleAttente)
+
+console.log(docteur.salleAttente);
 
 // ## Description du doctor
 // >Le doctor lui reçoit les patients dans son cabinet.
@@ -86,13 +88,13 @@ import {docteur,chat,pharmacie,cimetiere} from "./objets.js";
 // >Les patients iront par après à la pharmacie et recevront leur traitement s'ils ont assez d'argent. Dans le cas ou ils ont assez d'argent ils seront alors en bonne santé sinon ils seront mort et il faudra alors les pousser dans un cimetière.
 
 marcus.seDeplacer(pharmacie);
-// console.log(pharmacie.nbrClients);
+console.log(pharmacie.nbrClients);
 
 marcus.prendreMedoc(ctrlmajf,marcus.poche,cimetiere);
 pharmacie.nbrClients.pop()
 
 // console.log(pharmacie.nbrClients);
-// console.log(cimetiere.contenu);
+console.log(cimetiere.contenu);
 // ### Tarif des traitements
 // |Traitement|prix|
 // |---|---|
@@ -136,11 +138,11 @@ pharmacie.nbrClients.pop()
 
 
 // PERSO 3 SANGOKU
-console.log(docteur.cabinet);
 
 docteur.patientIn(sangoku.nom);
+console.log(`${marcus.nom} se retrouve dans le cabinet avec ${docteur.nom} et ${docteur.cabinet[0]}`);
+
 docteur.diagnostiques("Sangoku","404");
-console.log(docteur.cabinet);
 
 let CheckLinkRelation = new NomDiagnostiques("CheckLinkRelation",35);
 
@@ -231,3 +233,5 @@ pharmacie.nbrClients.pop()
 
 
 console.log(`Le docteur ${docteur.nom} et les lobbys pharmaceutiques sont riche. Requiescat In Pace : ${cimetiere.contenu}`);
+
+chat.miauler();
