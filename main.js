@@ -82,10 +82,6 @@ import {docteur,chat,pharmacie,cimetiere} from "./objets.js";
 // |azmatique|`Ventoline`|
 // |syntaxError|`f12+doc`|
 
-let saveOnFocusChange = new NomDiagnostiques("saveOnFocusChange",100);
-let CheckLinkRelation = new NomDiagnostiques("CheckLinkRelation",35);
-let Ventoline = new NomDiagnostiques("Ventoline",40);
-let f12doc = new NomDiagnostiques("f12+doc",20);
 
 
 // ## La pharmacie
@@ -94,7 +90,9 @@ let f12doc = new NomDiagnostiques("f12+doc",20);
 marcus.seDeplacer(pharmacie);
 // console.log(pharmacie.nbrClients);
 
+marcus.prendreMedoc(ctrlmajf,marcus.poche,cimetiere);
 
+// console.log(cimetiere.contenu);
 // ### Tarif des traitements
 // |Traitement|prix|
 // |---|---|
@@ -106,3 +104,121 @@ marcus.seDeplacer(pharmacie);
 // ​
 // # Vérification
 // >Grâce à votre débugger suivé à la trace l'évolution de chacun de vos patients. Vérifier bien qu'il quitte à chaque fois la salle d'attente avant d'entrer dans le cabinet et qu'ils sortent bien du cabinet avant de laisser quelqu'un d'autre entré.
+
+docteur.patientIn(optimus.nom);
+docteur.diagnostiques("Optimus","unsave");
+
+let saveOnFocusChange = new NomDiagnostiques("saveOnFocusChange",100);
+
+
+console.log(`Le traitement de ${marcus.nom} est ${saveOnFocusChange.nom}`);   
+
+
+// puis se fait payer avant de préscrire un traitement.
+
+docteur.prixConsultation(optimus, 50, docteur);
+
+
+// Attention le doctor fait à chaque fois sortir le patient de son cabinet avant de prendre le suivant.
+
+// console.log(docteur.cabinet);
+docteur.patientOut("Optimus", "traitement");
+// console.log(docteur.cabinet);
+// console.log(docteur.salleAttente);
+// console.log(marcus.etat);
+optimus.seDeplacer(pharmacie);
+// console.log(pharmacie.nbrClients);
+
+optimus.prendreMedoc(saveOnFocusChange,optimus.poche,cimetiere);
+
+
+
+
+// PERSO 3 SANGOKU
+
+docteur.patientIn(sangoku.nom);
+docteur.diagnostiques("Sangoku","404");
+
+let CheckLinkRelation = new NomDiagnostiques("CheckLinkRelation",35);
+
+
+console.log(`Le traitement de ${sangoku.nom} est ${CheckLinkRelation.nom}`);   
+
+
+// puis se fait payer avant de préscrire un traitement.
+
+docteur.prixConsultation(sangoku, 50, docteur);
+
+
+// Attention le doctor fait à chaque fois sortir le patient de son cabinet avant de prendre le suivant.
+
+// console.log(docteur.cabinet);
+docteur.patientOut("Sangoku", "traitement");
+// console.log(docteur.cabinet);
+// console.log(docteur.salleAttente);
+// console.log(marcus.etat);
+sangoku.seDeplacer(pharmacie);
+// console.log(pharmacie.nbrClients);
+
+sangoku.prendreMedoc(saveOnFocusChange,sangoku.poche,cimetiere);
+
+
+// PERSO  SANGOKU
+
+docteur.patientIn(darthvader.nom);
+docteur.diagnostiques("Darthvader","azmatique");
+
+let ventoline = new NomDiagnostiques("Ventoline",40);
+
+
+console.log(`Le traitement de ${darthvader.nom} est ${ventoline.nom}`);   
+
+
+// puis se fait payer avant de préscrire un traitement.
+docteur.prixConsultation(darthvader, 50, docteur);
+
+
+// Attention le doctor fait à chaque fois sortir le patient de son cabinet avant de prendre le suivant.
+
+// console.log(docteur.cabinet);
+docteur.patientOut("Darthvader", "traitement");
+// console.log(docteur.cabinet);
+// console.log(docteur.salleAttente);
+// console.log(marcus.etat);
+darthvader.seDeplacer(pharmacie);
+// console.log(pharmacie.nbrClients);
+
+darthvader.prendreMedoc(ventoline,darthvader.poche,cimetiere);
+// console.log(darthvader.poche);
+
+
+
+// perso 4 Semicolon
+
+docteur.patientIn(semicolon.nom);
+docteur.diagnostiques("Semicolon","syntaxError");
+
+let f12doc = new NomDiagnostiques("f12+doc",20);
+
+console.log(`Le traitement de ${semicolon.nom} est ${f12doc.nom}`);   
+
+
+// puis se fait payer avant de préscrire un traitement.
+docteur.prixConsultation(semicolon, 50, docteur);
+
+
+// Attention le doctor fait à chaque fois sortir le patient de son cabinet avant de prendre le suivant.
+
+// console.log(docteur.cabinet);
+docteur.patientOut("Semicolon", "traitement");
+// console.log(docteur.cabinet);
+// console.log(docteur.salleAttente);
+// console.log(marcus.etat);
+semicolon.seDeplacer(pharmacie);
+// console.log(pharmacie.nbrClients);
+
+semicolon.prendreMedoc(ventoline,semicolon.poche,cimetiere);
+// console.log(semicolon.poche);
+
+
+

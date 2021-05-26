@@ -18,7 +18,7 @@ let docteur = {
      patientOut(nom,etat){
           
           docteur.cabinet.pop();
-          console.log(`${nom} est sortit du cabinet`);
+          console.log(`${nom} est sorti du cabinet`);
         
           // personne.etat = newEtat;
           // newEtat = "En traitement";
@@ -42,7 +42,7 @@ let docteur = {
           }else if (maladie == 404 && nom == "Sangoku"){
                console.log(`La maladie de ${nom} est ${maladie}`);            
 
-          }else if(maladie == "azmatique" && nom == "Dartvader"){
+          }else if(maladie == "azmatique" && nom == "Darthvader"){
                console.log(`La maladie de ${nom} est ${maladie}`);
           }else if(maladie == "syntaxError" && nom == "Semicolon"){
                console.log(`La maladie de ${nom} est ${maladie}`);
@@ -83,3 +83,5 @@ let cimetiere = {
      nom: "cimetière",
      contenu: [],
 }
+
+// console.log(`Sorry, ${this.nom} n'a pas assez d'argent, tu vas crever, this is america.`);
