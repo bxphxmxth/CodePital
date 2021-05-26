@@ -25,12 +25,23 @@ docteur.salleAttente.push(Patients.length);
 // console.log(docteur.salleAttente);
 console.log(`Dans la salle d'attente, il y a ${Patients.length} patients`);
 docteur.cabinet.push(marcus);
+// docteur.salleAttente.splice(docteur.salleAttente.indexOf(0,1));
+// console.log(docteur.salleAttente)
+
+// ## Description du doctor
+// >Le doctor lui reçoit les patients dans son cabinet.
+
 console.log(`${marcus.nom} est entré dans le cabinet`);
 // console.log(docteur.cabinet);
-console.log(`La maladie de ${marcus.nom} est ${marcus.maladie}`);
-// ## Description du doctor
-// >Le doctor lui reçoit les patients dans son cabinet. Tout d'abord il les diagnostiques puis se fait payer avant de préscrire un traitement. Attention le doctor fait à chaque fois sortir le patient de son cabinet avant de prendre le suivant. Dans son cabinet il y a son chat de race sphynx pour garder un environemment stérile. Son chat miaule toutes les deux secondes dans la console(bonus). La consultation coûte 50€. Les patients son dans un état de traitement avant de sortir du cabinet.
-// ​
+
+// Tout d'abord il les diagnostiques 
+
+docteur.diagnostiques("Marcus","mal indenté");
+
+
+
+// puis se fait payer avant de préscrire un traitement. Attention le doctor fait à chaque fois sortir le patient de son cabinet avant de prendre le suivant. Dans son cabinet il y a son chat de race sphynx pour garder un environemment stérile. Son chat miaule toutes les deux secondes dans la console(bonus). La consultation coûte 50€. Les patients son dans un état de traitement avant de sortir du cabinet.
+// // ​
 // |nom|argent|cabinet|diagnostique|patienTIn|patientOut
 // |---|---|---|---|---|---|
 
